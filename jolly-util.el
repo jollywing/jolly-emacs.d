@@ -1,5 +1,16 @@
 
+;; package-install google-translate
+;; since the default source language and the default language are set,
+;; If you want to use other language, you may type "C-u C-c t"
+(require 'google-translate)
+(require 'google-translate-default-ui)
+(setq google-translate-default-source-language "auto")
+(setq google-translate-default-target-language "zh-CN")
+(global-set-key "\C-ct" 'google-translate-at-point)
+(global-set-key "\C-cT" 'google-translate-query-translate)
 
+;; provided in ~/.emacs.d/site-lisp
+;; the sdcv binary and the dictionary is needed
 (require 'sdcv-mode)
 (global-set-key (kbd "C-c d") 'sdcv-search)
 

@@ -195,4 +195,12 @@
 ;; switch window with shift + arrow keys
 (windmove-default-keybindings)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Run As Daemon
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(server-force-delete)
+(server-start)
+
+
 (provide 'jolly-basic)

@@ -1,11 +1,12 @@
 
-;;---------------- CC-Mode -----------------------
-
-(require 'cc-mode)
-
 (setq default-tab-width 4)
 ;; replace tabs with spaces
 (setq-default indent-tabs-mode nil)
+
+
+;;---------------- CC-Mode -----------------------
+
+(require 'cc-mode)
 
 (setq c-basic-offset 4)
 (setq c-offsets-alist '((arglist-cont-nonempty . ++)

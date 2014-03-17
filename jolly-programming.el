@@ -83,16 +83,21 @@
 
 ;;-------------------------Auto Complete--------------------
 ;; (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete-1.3.1")
-(eval-after-load "auto-complete"
-  (progn
-    (require 'auto-complete-config)
-    (add-to-list 'ac-dictionary-directories
-		 "~/.emacs.d/elpa/auto-complete-20140314.802/dict")
-    (ac-config-default)
-    (setq ac-delay 0.5)
-    ))
+;; (eval-after-load "auto-complete"
+;;   (progn
+;;     (require 'auto-complete-config)
+;;     (add-to-list 'ac-dictionary-directories
+;; 		 "~/.emacs.d/elpa/auto-complete-20140314.802/dict")
+;;     (ac-config-default)
+;;     (setq ac-delay 0.5)
+;;     ))
 
 ;;-------------------------Company--------------------
 ;; (add-hook 'after-init-hook 'global-company-mode)
+
+
+;;-------------------------scheme--------------------
+;; (require 'cmuscheme)
+(setq scheme-program-name "guile")
 
 (provide 'jolly-programming)

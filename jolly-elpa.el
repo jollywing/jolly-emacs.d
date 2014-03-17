@@ -1,5 +1,5 @@
 
-(require 'cl)
+;; (require 'cl)
 
 (require 'package)
 
@@ -32,9 +32,9 @@
 ;;   (when (not (package-installed-p p))
 ;;     (package-install p)))
 
-(setq package-enable-at-startup nil)
+;; (setq package-enable-at-startup nil)
 ;; Even if the value is nil, you can type M-x package-initialize to
 ;; activate the package system at any time.
-(package-initialize)
+;; (package-initialize)
 
 (provide 'jolly-elpa)

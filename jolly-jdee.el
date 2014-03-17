@@ -31,3 +31,4 @@
 ;;              auto-mode-alist)))
 ;;   (require 'jde))
 
+(provide 'jolly-jdee)

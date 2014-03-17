@@ -1,5 +1,6 @@
 
 ;;------------------------- JAVASCRIPT --------------------
+;; package-install js2-mode
 ;; Emacs has a built-in js mode
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
@@ -10,7 +11,7 @@
 ;;                               auto-mode-alist))
 
 ;;------------------------ WEB MODE --------------------
-
+;; package-install web-mode
 
 (require 'web-mode)
 (autoload 'web-mode "web-mode.el" "" t)
