@@ -52,9 +52,10 @@
 
 ;; Since emacs 24, emacs include theme system.
 ;; (load-theme 'tango t)
-(if (>= emacs-major-version 24)
-    (load-theme 'wombat t)
-  (load-file "~/.emacs.d/spring-theme.el"))
+;; (if (>= emacs-major-version 24)
+;;     (load-theme 'wombat t)
+;;   (load-file "~/.emacs.d/spring-theme.el"))
+(load-file "~/.emacs.d/spring-theme.el")
 
 ;; no cursor blink
 (blink-cursor-mode -1)
