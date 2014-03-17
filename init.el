@@ -38,7 +38,7 @@
 ;; (require 'jolly-lua)
 
 ;; (require 'jolly-emms)
-(require 'jolly-w3m)
+;;(require 'jolly-w3m)
 
 ;;------------------------- ARDUINO ------------------------------
 ;; (require 'arduino-mode)

@@ -4,7 +4,9 @@
 
 (global-font-lock-mode t)       ;sytax on
 
-(global-subword-mode)                   ; I like this
+;; subword mode is supported since emacs 23.2
+(if (>= emacs-major-version 24)
+    (global-subword-mode))                  ; I like this
 
 ;; go to a line by giving its number,
 ;; which is bound to M-g in XEmacs
@@ -81,11 +83,14 @@
 
 ;;-------------------------Auto Complete--------------------
 ;; (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete-1.3.1")
-;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories
-;;              "~/.emacs.d/site-lisp/auto-complete-1.3.1/ac-dict")
-;; (ac-config-default)
-;; (setq ac-delay 0.5)
+(eval-after-load "auto-complete"
+  (progn
+    (require 'auto-complete-config)
+    (add-to-list 'ac-dictionary-directories
+		 "~/.emacs.d/elpa/auto-complete-20140314.802/dict")
+    (ac-config-default)
+    (setq ac-delay 0.5)
+    ))
 
 ;;-------------------------Company--------------------
 ;; (add-hook 'after-init-hook 'global-company-mode)

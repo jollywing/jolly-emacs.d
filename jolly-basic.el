@@ -1,4 +1,12 @@
 
+(if (equal window-system 'w32)
+    (progn
+      (setq default-directory "e:/jollywing/")
+      (setq ext-bin-path "e:/jollywing/emacs-24.3/bin-ext/;")
+      (setq mingw-path "E:\\jollywing\\MinGW\\bin;E:\\jollywing\\MinGW\\msys\\1.0\\bin;")
+      (setenv "PATH" (concat ext-bin-path mingw-path (getenv "PATH")))
+      ))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Encodings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -18,11 +26,21 @@
 (set-keyboard-coding-system 'utf-8)
 ;; encoding method of reading and writing file name
 ;; 'utf-8 is good selection under linux
-(setq file-name-coding-system 'utf-8)
-(set-clipboard-coding-system 'utf-8)
-(set-selection-coding-system 'utf-8)
+(if (equal window-system 'w32)
+    (progn
+      (setq file-name-coding-system 'gbk)
+      (setq-default pathname-coding-system 'gbk)
+      (set-clipboard-coding-system 'gbk)
+      (set-selection-coding-system 'gbk)
+      )
+  (progn
+    (setq file-name-coding-system 'utf-8)
+    (setq-default pathname-coding-system 'utf-8)
+    (set-clipboard-coding-system 'utf-8)
+    (set-selection-coding-system 'utf-8)
+    ))
+
 (prefer-coding-system 'utf-8)
-(setq-default pathname-coding-system 'utf-8)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Mark

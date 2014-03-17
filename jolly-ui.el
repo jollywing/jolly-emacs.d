@@ -52,8 +52,9 @@
 
 ;; Since emacs 24, emacs include theme system.
 ;; (load-theme 'tango t)
-(if is-after-emacs-23
-(load-theme 'wombat t))
+(if (>= emacs-major-version 24)
+    (load-theme 'wombat t)
+  (load-file "~/.emacs.d/spring-theme.el"))
 
 ;; no cursor blink
 (blink-cursor-mode -1)
@@ -61,7 +62,7 @@
 ;; if under terminal, remove menu
 ;; (if (equal window-system nil) (menu-bar-mode -1))
 ;; "nil" doesn't take effect, since Emacs 24
-(menu-bar-mode -1)
+;; (menu-bar-mode -1)
 
 ;; no tool bar
 (tool-bar-mode -1)
@@ -114,51 +115,6 @@ using ~ instead of $HOME"
 
 ;; 增大行距
 (setq-default line-spacing 3)
-
-
-
-;; 通过 customize-face 定制的外观
-;; (setq custom-file "~/blog/emacs-lisp/emacs-custom.el")
-;; (load custom-file)
-
-;; customize theme with color-theme package
-;; (setq load-path (cons "~/.emacs.d/color-theme" load-path))
-
-;; (defun set-theme-darkslate ()
-;;   " set color theme to ~/blog/emacs-lisp/color-theme/themes/color-theme-darkslate.el"
-;;   (interactive)
-;;   (load-file "~/blog/emacs-lisp/color-theme/themes/color-theme-darkslate.el")
-;;   (my-color-theme))
-;; 
-;; (defun set-theme-black ()
-;;   " set color theme to ~/blog/emacs-lisp/color-theme/themes/color-theme-black.el"
-;;   (interactive)
-;;   (load-file "~/blog/emacs-lisp/color-theme/themes/color-theme-black.el")
-;;   (my-color-theme))
-;; 
-;; (defun set-theme-desert ()
-;;   " set color theme to ~/blog/emacs-lisp/color-theme/themes/color-theme-desert.el"
-;;   (interactive)
-;;   (load-file "~/blog/emacs-lisp/color-theme/themes/color-theme-desert.el")
-;;   (my-color-theme))
-;; 
-;; (defun set-theme-bluesea ()
-;;   " set color theme to ~/blog/emacs-lisp/color-theme/themes/color-theme-bluesea.el"
-;;   (interactive)
-;;   (load-file "~/blog/emacs-lisp/color-theme/themes/color-theme-bluesea.el")
-;;   (my-color-theme))
-;;   
-;; (defun set-theme-lightgray ()
-;;   " set color theme to ~/blog/emacs-lisp/color-theme/themes/color-theme-gray.el"
-;;   (interactive)
-;;   (load-file "~/blog/emacs-lisp/color-theme/themes/color-theme-gray.el")
-;;   (my-color-theme))
-;; 
-;; (defun set-theme-lightgreen ()
-;;   " set color theme to ~/blog/emacs-lisp/color-theme/themes/color-theme-black.el"
-;;   (interactive)
-;;   (load-file "~/blog/emacs-lisp/color-theme/themes/color-theme-forest.el")
-;;   (my-color-theme))
 
 
 (provide 'jolly-ui)

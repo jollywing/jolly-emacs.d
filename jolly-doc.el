@@ -24,7 +24,8 @@
       no-word-default-coding "utf-8")
 
 ;; draw pic with graphviz in emacs
-(load-file "~/.emacs.d/site-lisp/graphviz-dot-mode.el")
+;; since it is installed with elpa, it needn't config anymore.
+;; (load-file "~/.emacs.d/site-lisp/graphviz-dot-mode.el")
 
 ;; write screenplay in emacs
 ;; (require 'screenwriter)
