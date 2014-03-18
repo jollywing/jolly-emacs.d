@@ -18,6 +18,7 @@
 (setq load-path (cons "~/.emacs.d" load-path))
 (setq load-path (cons "~/.emacs.d/site-lisp" load-path))
 
+(require 'jolly-elpa)
 
 (require 'jolly-ui)
 (require 'jolly-basic)
@@ -36,7 +37,5 @@
 ;; (require 'jolly-emms)
 ;; (require 'jolly-w3m)
 ;; (require 'jolly-gnus)
-
-(require 'jolly-elpa)
 
 
