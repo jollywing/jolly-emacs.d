@@ -1,4 +1,12 @@
+;; under windows, you may want to change EmacsHome.
+;; edit `EmacsRoot/site-lisp/site-start.el'
+;; add follow lines:
+;; (defvar emacs-root-dir (substring data-directory 0 -4))
+;; (setenv "HOME" emacs-root-dir)
 
+;; add PATH of mingw to PATH
+;; mkdir bin-ext under win emacs root
+;; add PATH of bin-ext to PATH
 (if (equal window-system 'w32)
     (progn
       (setq default-directory "e:/jollywing/")

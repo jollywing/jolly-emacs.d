@@ -621,6 +621,7 @@
    `(web-mode-html-attr-value-face ((,class (:foreground "DarkRed"))))
    `(web-mode-html-tag-face ((,class (:foreground "blue"))))
    `(web-mode-doctype-face ((,class (:foreground "gray20"))))
+   `(js3-external-variable-face ((,class (:foreground "magenta"))))
    `(zmacs-region ((,class (:background "white" :foreground "midnightblue"))))))
 
 (provide-theme 'spring)

@@ -1,7 +1,7 @@
 
 ;;------------------------- JAVASCRIPT --------------------
+;; since emacs 23.2, import js-mode for editing javascript.
 ;; package-install js2-mode
-;; Emacs has a built-in js mode
 ;; (autoload 'js2-mode "js2-mode" nil t)
 ;; (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
