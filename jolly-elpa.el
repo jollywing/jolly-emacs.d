@@ -10,11 +10,10 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
-;; (setq package-enable-at-startup nil)
+(setq package-enable-at-startup nil)
 ;; Even if the value is nil, you can type M-x package-initialize to
 ;; activate the package system at any time.
-(if (<= emacs-major-version 23)
-    (package-initialize))
+(package-initialize)
 
 ;; due to the startup latency and the problems about the version of elisp
 ;; package, forbidden the automatic installation.
