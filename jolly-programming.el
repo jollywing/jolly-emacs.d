@@ -73,7 +73,7 @@
 ;;-------------------------Auto Complete--------------------
 ;; package-install auto-complete
 ;; (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete-1.3.1")
-(eval-after-load "auto-complete"
+(eval-after-load "auto-complete-mode"
   (progn
     (require 'auto-complete-config)
     (ac-config-default)

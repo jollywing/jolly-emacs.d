@@ -42,6 +42,7 @@
 ;; (if (>= emacs-major-version 24)
 ;;     (add-to-list 'my-default-packages 'js2-mode))
 
+;; dolist is defined in cl.el
 ;; (dolist (p my-default-packages)
 ;;   (when (not (package-installed-p p))
 ;;     (package-install p)))
