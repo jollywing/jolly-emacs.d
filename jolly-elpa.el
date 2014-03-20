@@ -13,6 +13,7 @@
 (setq package-enable-at-startup nil)
 ;; Even if the value is nil, you can type M-x package-initialize to
 ;; activate the package system at any time.
+;; Activate: (1) add pkg-dir to load-path; (2) load pkg-autoloads.el
 (package-initialize)
 
 ;; due to the startup latency and the problems about the version of elisp

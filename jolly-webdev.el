@@ -1,9 +1,12 @@
 
 ;;------------------------- JAVASCRIPT --------------------
 ;; since emacs 23.2, import js-mode for editing javascript.
-;; package-install js2-mode
-;; (autoload 'js2-mode "js2-mode" nil t)
-;; (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+;; js2-mode and js3-mode is a enhanced javascript mode.
+;; We use js3-mode
+;; (autoload 'js3-mode "js3-mode" nil t)
+;; (add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+;; package-install js3-mode
+(add-hook 'js3-mode-hook 'js3-mode-hide-warnings-and-errors)
 
 ;;------------------------- PHP -------------------------
 ;; (autoload 'php-mode "php-mode.el" "Php mode." t)

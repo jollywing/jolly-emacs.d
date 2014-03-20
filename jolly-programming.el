@@ -50,9 +50,6 @@
 (add-hook 'c-mode-hook 'ff-other-file-key)
 (add-hook 'c++-mode-hook 'ff-other-file-key)
 
-(defun prelude-makefile-mode-defaults ()
-  (setq indent-tabs-mode t))
-
 ;;---------------------------Make-------------------------
 
 (global-set-key (kbd "C-`") 'next-error)
@@ -73,11 +70,16 @@
 ;;-------------------------Auto Complete--------------------
 ;; package-install auto-complete
 ;; (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete-1.3.1")
-(eval-after-load "auto-complete-mode"
+(eval-after-load "auto-complete"
   (progn
-    (require 'auto-complete-config)
-    (ac-config-default)
-    (setq ac-delay 0.5)
+    ;; If auto-complete-config not found, require return nil
+    (if (require 'auto-complete-config "auto-complete-config" t)
+        (progn
+          (message "jolly said: auto complete loaded.")
+          (ac-config-default)
+          (setq ac-delay 0.5)
+          )
+      (message "jolly said: auto complete plugin not found."))
     ))
 
 ;;-------------------------Company--------------------
