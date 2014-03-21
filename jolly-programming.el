@@ -82,6 +82,13 @@
       (message "jolly said: auto complete plugin not found."))
     ))
 
+;; (when (load "auto-complete" t)
+;;   (progn
+;;     (message "jolly said: auto complete loaded.")
+;;     (require 'auto-complete-config)
+;;     (ac-config-default)
+;;     (setq ac-delay 0.5)))
+
 ;;-------------------------Company--------------------
 ;; package-install company
 ;; (add-hook 'after-init-hook 'global-company-mode)
