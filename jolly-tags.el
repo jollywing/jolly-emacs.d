@@ -5,17 +5,8 @@
 ;; ------------------------- Cscope -------------------------
 
 ;; -------------------------GNU GLOBAL-------------------------
-;; (autoload 'gtags-mode "gtags" "" t)
-;; (global-set-key [(control c) (h)] 'gtags-display-browser)
-;; (global-set-key [(control c) (\])] 'gtags-find-tag-from-here)
-;; (global-set-key (kbd "\e*") 'gtags-pop-stack)
-;; (global-set-key [(control c) (f)] 'gtags-parse-file)
-;; (global-set-key [(control c) (g)] 'gtags-find-with-grep)
-;; (global-set-key (kbd "C-c s") 'gtags-find-symbol)
-;; (global-set-key (kbd "C-c c") 'gtags-find-rtag)
-;; (global-set-key (kbd "\e.") 'gtags-find-tag)
-;; (global-set-key (kbd "C-c v") 'gtags-visit-rootdir)
-
+;; package-install gtags
+(setq gtags-suggested-key-mapping t)
 
 ;;------------------------ SPEEDBAR ------------------------
 (setq speedbar-sort-tags t)
