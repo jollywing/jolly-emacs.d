@@ -2,7 +2,7 @@
 ;; package-install google-translate
 ;; since the default source language and the default language are set,
 ;; If you want to use other language, you may type "C-u C-c t"
-(eval-after-load "google-translate"
+(when (require 'google-translate "google-translate" t)
   (progn
     (setq google-translate-default-source-language "auto")
     (setq google-translate-default-target-language "zh-CN")

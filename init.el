@@ -35,7 +35,7 @@
 ;; (require 'jolly-cedet)
 
 ;; (require 'jolly-emms)
-;; (require 'jolly-w3m)
+(require 'jolly-w3m)
 ;; (require 'jolly-gnus)
 
 
