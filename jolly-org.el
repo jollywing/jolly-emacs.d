@@ -32,4 +32,6 @@
 ;; insert a org heading with M-RET, so I bind M-] to insert heading.
 ;; (define-key org-mode-map (kbd "M-]") 'org-insert-heading)
 
+(add-hook 'org-mode-hook 'imenu-add-menubar-index)
+
 (provide 'jolly-org)

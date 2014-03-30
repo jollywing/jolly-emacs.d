@@ -4,6 +4,10 @@
 
 (global-font-lock-mode t)       ;sytax on
 
+(setq default-tab-width 4)
+;; replace tabs with spaces
+(setq-default indent-tabs-mode nil)
+
 ;; subword mode is supported since emacs 23.2
 (if (>= emacs-major-version 24)
     (global-subword-mode))                  ; I like this
@@ -11,6 +15,27 @@
 ;; go to a line by giving its number,
 ;; which is bound to M-g in XEmacs
 (global-set-key [(meta g)] 'goto-line)
+
+;;-------------------- ff-find-other-file --------------------
+(setq ff-always-in-other-window t)
+(setq ff-always-try-to-create t)
+(defun ff-other-file-key ()
+  (local-set-key (kbd "C-c a") 'ff-find-other-file))
+(add-hook 'c-mode-hook 'ff-other-file-key)
+(add-hook 'c++-mode-hook 'ff-other-file-key)
+
+;;---------------------------Make-------------------------
+
+(global-set-key (kbd "C-`") 'next-error)
+(global-set-key [(f9)] 'next-error)
+(global-set-key [(f10)] 'compile)
+
+;; use make instead of "make -k"
+(setq compile-command "make")
+
+(add-hook 'makefile-mode-hook (lambda() (setq indent-tabs-mode t)))
+
+;;------------------------- COMPLETION -------------------------
 
 (global-set-key [(meta ?/)] 'hippie-expand)
 (setq hippie-expand-try-functions-list
@@ -41,25 +66,6 @@
 ;; )
 
 ;; (global-set-key [(tab)] 'my-indent-or-complete)
-
-;;-------------------- ff-find-other-file --------------------
-(setq ff-always-in-other-window t)
-(setq ff-always-try-to-create t)
-(defun ff-other-file-key ()
-  (local-set-key (kbd "C-c a") 'ff-find-other-file))
-(add-hook 'c-mode-hook 'ff-other-file-key)
-(add-hook 'c++-mode-hook 'ff-other-file-key)
-
-;;---------------------------Make-------------------------
-
-(global-set-key (kbd "C-`") 'next-error)
-(global-set-key [(f9)] 'next-error)
-(global-set-key [(f10)] 'compile)
-
-;; use make instead of "make -k"
-(setq compile-command "make")
-
-(add-hook 'makefile-mode-hook (lambda() (setq indent-tabs-mode t)))
 
 ;;-------------------------Yasnippet-------------------------
 ;; (add-to-list 'load-path "~/.emacs.d/yasnippet-0.7.0")

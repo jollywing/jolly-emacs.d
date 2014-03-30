@@ -9,7 +9,7 @@
 ;; package-install cdlatex
 ;; (autoload 'cdlatex-mode "cdlatex" "CDLaTeX Mode" t)
 ;; (autoload 'turn-on-cdlatex "cdlatex" "CDLaTeX Mode" nil)
-(add-hook 'LaTex-mode-hook 'turn-on-cdlatex)
+(add-hook 'LaTex-mode-hook '(lambda() (turn-on-cdlatex) (imenu-add-menubar-index)))
 (setq latex-run-command "xelatex")
 
 ;; package-install markdown-mode
@@ -18,6 +18,7 @@
 ;; (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-hook 'markdown-mode-hook 'imenu-add-menubar-index)
 
 ;; open MSword document in emacs
 ;; no-word.el is provided in ~/.emacs.d/site-lisp
