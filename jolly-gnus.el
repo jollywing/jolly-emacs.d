@@ -1,6 +1,6 @@
 
 ;; gnus setup
-(setq user-mail-address "wujiqing@apecn.com")
+(setq user-mail-address "jiqingwu@gmail.com")
 (setq user-full-name "Wu Jiqing")
 
 ;; pop setup
