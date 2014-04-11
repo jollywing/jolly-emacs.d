@@ -13,9 +13,9 @@
 (setq speedbar-use-images nil)
 (setq speedbar-update-flag t)
 (setq dframe-update-speed 2)
-(setq speedbar-frame-parameters
+(setq speedbar-frame-parameters 
       '((minibuffer) (width . 25) (border-width . 0)
-        (menu-bar-lines. 0) (tool-bar-lines . 0) (unsplittable . t)
+        (menu-bar-lines . 0) (tool-bar-lines . 0) (unsplittable . t)
         (left-fringe . 0)))
 (global-set-key (kbd "C-x t") 'speedbar-get-focus)
 
