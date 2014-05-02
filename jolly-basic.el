@@ -1,19 +1,19 @@
+
 ;; under windows, you may want to change EmacsHome.
 ;; edit `EmacsRoot/site-lisp/site-start.el'
 ;; add follow lines:
+
 ;; (defvar emacs-root-dir (substring data-directory 0 -4))
 ;; (setenv "HOME" emacs-root-dir)
+;; (defvar MINGW-PATH "your/mingw/bin/path;your/msys/bin/path"
+;; "MinGW path to provide GCC and shell utilities")
+;; (defvar GIT-PATH "your/msysgit/bin/path"
+;; "Git path to provide GIT, antiword, also BASH")
+;; (defvar EXTEND-PATH "" "The path to Other utilities you like")
+;; (setenv "PATH" (concat MINGW-PATH GIT-PATH EXTEND-PATH (getenv "PATH")))
+;; (setq default-directory "PATH/TO/START")
+;; (setq shell-file-name "bash.exe")
 
-;; add PATH of mingw to PATH
-;; mkdir bin-ext under win emacs root
-;; add PATH of bin-ext to PATH
-(if (equal window-system 'w32)
-    (progn
-      (setq default-directory "e:/jollywing/")
-      (setq ext-bin-path "e:/jollywing/emacs-24.3/bin-ext/;")
-      (setq mingw-path "E:\\jollywing\\MinGW\\bin;E:\\jollywing\\MinGW\\msys\\1.0\\bin;")
-      (setenv "PATH" (concat ext-bin-path mingw-path (getenv "PATH")))
-      ))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Encodings
