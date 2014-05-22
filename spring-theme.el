@@ -356,6 +356,7 @@
    `(info-menu-header ((,class (:bold t :weight bold :family "helv"))))
    `(info-node ((,class (:italic t :bold t :foreground "white" :slant italic :weight bold))))
    `(info-xref ((,class (:bold t :foreground "blue" :weight bold))))
+   `(info-xref-visited ((,class (:bold t :foreground "maroon" :weight bold))))
    `(isearch ((,class (:bold t :background "palevioletred2" :foreground "brown4" :weight bold))))
    `(isearch-fail ((,class (:background "red4"))))
    `(isearch-secondary ((,class (:foreground "red3"))))
