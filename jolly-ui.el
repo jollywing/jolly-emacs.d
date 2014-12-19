@@ -90,7 +90,7 @@
 ;; (setq display-time-24hr-format t)
 ;; (setq display-time-day-and-date t)
 
-(display-battery-mode 1)
+;; (display-battery-mode)
 
 ;; show the absolute path in frame title
 ;;(setq frame-title-format "emacs@%f")

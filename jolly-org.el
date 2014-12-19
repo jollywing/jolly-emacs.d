@@ -33,5 +33,5 @@
 ;; (define-key org-mode-map (kbd "M-]") 'org-insert-heading)
 
 (add-hook 'org-mode-hook 'imenu-add-menubar-index)
-
+(add-hook 'org-mode-hook (lambda ()(setq truncate-lines nil)))
 (provide 'jolly-org)

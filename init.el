@@ -39,3 +39,15 @@
 ;; (require 'jolly-gnus)
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes (quote ("456af71f569329e2f8857ede2d1966b7a466ffff32824e462c35d162b0a731f2" "1d2a39e7dd8f8f31261cf06c7deffb04de3d6f4549432f5cc8766d369ae5f470" "85b483c836eef7153722305be196f417286f4f1cef14818c3a0563e67b86e6cb" default))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
