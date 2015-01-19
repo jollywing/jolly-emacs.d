@@ -3,6 +3,14 @@
 (setq org-agenda-files (list "~/blog/org/todo.org"
                              "~/blog/org/someday.org"))
 
+;; highlight code when edit org document
+(setq org-src-fontify-natively t)
+
+;; customize title size
+(set-face-attribute 'org-level-1 nil :height 1.5 :bold t)
+(set-face-attribute 'org-level-2 nil :height 1.3 :bold t)
+(set-face-attribute 'org-level-3 nil :height 1.1 :bold t)
+
 ;; M-x org-publish
 (setq org-publish-project-alist
       '(("note-org"
@@ -23,7 +31,7 @@
          :recursive t
          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|html\\|swf\\|zip\\|gz\\|txt\\|el"
          :publishing-function org-publish-attachment)
-        ("note" 
+        ("note"
          :components ("note-org" "note-static")
          :author "jiqingwu@gmail.com"
          )))

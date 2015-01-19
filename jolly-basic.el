@@ -133,6 +133,9 @@
 (setq-default make-backup-files nil)
 (setq delete-auto-save-files t)
 
+;; delete trailing white-space, 2015-01-06
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 ;;(icomplete-mode 1)
 
 ;; (iswitchb-mode 1)
