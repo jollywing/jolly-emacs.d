@@ -1,3 +1,4 @@
+(require 'org)
 
 (setq org-log-done 'time)
 (setq org-agenda-files (list "~/blog/org/todo.org"
