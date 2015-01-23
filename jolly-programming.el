@@ -1,6 +1,9 @@
 
-;;----------------------------GENERAL------------------------------
+;;=================== RECOMMENDED PKGS =====================
+;; auto-complete
+;; yasnippet
 
+;;----------------------------GENERAL------------------------------
 
 (global-font-lock-mode t)       ;sytax on
 
@@ -40,14 +43,14 @@
 (global-set-key [(meta ?/)] 'hippie-expand)
 (setq hippie-expand-try-functions-list
       '(
-        try-complete-file-name
+        ;; try-complete-file-name
         try-expand-all-abbrevs
         try-expand-list
         try-expand-dabbrev
         try-expand-line
         try-expand-dabbrev-all-buffers
-        try-complete-lisp-symbol-partially
-        try-complete-lisp-symbol
+        ;; try-complete-lisp-symbol-partially
+        ;; try-complete-lisp-symbol
         try-expand-list-all-buffers
         try-expand-line-all-buffers
         try-expand-dabbrev-from-kill
@@ -66,25 +69,23 @@
 ;; (global-set-key [(tab)] 'my-indent-or-complete)
 
 ;;-------------------------Yasnippet-------------------------
-;; (add-to-list 'load-path "~/.emacs.d/yasnippet-0.7.0")
-;; (require 'yasnippet)
-;; (yas/initialize)
-;; (yas/load-directory "~/.emacs.d/yasnippet-0.7.0/snippets")
+(if (require 'yasnippet "yasnippet" t)
+    (progn
+      (message "jolly said: yasnippet loaded.")
+      (yas-global-mode 1)
+      )
+  (message "jolly said: yasnippet plugin not found."))
 
 ;;-------------------------Auto Complete--------------------
 ;; package-install auto-complete
-;; (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-complete-1.3.1")
-(eval-after-load "auto-complete"
-  (progn
-    ;; If auto-complete-config not found, require return nil
-    (if (require 'auto-complete-config "auto-complete-config" t)
-        (progn
-          (message "jolly said: auto complete loaded.")
-          (ac-config-default)
-          (setq ac-delay 0.5)
-          )
-      (message "jolly said: auto complete plugin not found."))
-    ))
+;; If auto-complete-config not found, require return nil
+(if (require 'auto-complete-config "auto-complete-config" t)
+    (progn
+      (message "jolly said: auto complete loaded.")
+      (ac-config-default)
+      (setq ac-delay 0.5)
+      )
+  (message "jolly said: auto complete plugin not found."))
 
 ;; (when (load "auto-complete" t)
 ;;   (progn

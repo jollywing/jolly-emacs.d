@@ -12,7 +12,7 @@
 
 ;; (defconst is-after-emacs-23  (<= 23 emacs-major-version) "judge version")
 ;; (defvar mswin (equal window-system 'w32) "Non-nil means windows system.")
-;; ;;note: mac port version use window-system == mac 
+;; ;;note: mac port version use window-system == mac
 ;; (defvar macosx (equal window-system 'ns) "Non-nil means Mac OSX.")
 
 (setq load-path (cons "~/.emacs.d" load-path))
@@ -31,6 +31,7 @@
 (require 'jolly-programming)
 (require 'jolly-tags)
 (require 'jolly-cc)
+(require 'jolly-java)
 (require 'jolly-webdev)
 ;; (require 'jolly-cedet)
 
