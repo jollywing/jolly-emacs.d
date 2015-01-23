@@ -15,7 +15,6 @@
 ;; ;;note: mac port version use window-system == mac
 ;; (defvar macosx (equal window-system 'ns) "Non-nil means Mac OSX.")
 
-(setq load-path (cons "~/.emacs.d" load-path))
 (setq load-path (cons "~/.emacs.d/site-lisp" load-path))
 
 (require 'jolly-elpa)
