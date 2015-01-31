@@ -43,7 +43,7 @@
 (global-set-key [(meta ?/)] 'hippie-expand)
 (setq hippie-expand-try-functions-list
       '(
-        ;; try-complete-file-name
+        try-complete-file-name
         try-expand-all-abbrevs
         try-expand-list
         try-expand-dabbrev

@@ -26,9 +26,10 @@
     ;;          (cursor-color . "WhiteSmoke"))
     ;;        default-frame-alist))
 
+    ;; (set-face-attribute 'default nil :height 180)
     (setq default-frame-alist
           (append
-           '((font . "consolas-16")
+           '((font . "consolas-18")
              (background-color . "#99bb99")
              (foreground-color . "black")
              (cursor-color . "dark red")
@@ -51,9 +52,8 @@
 
 
 ;; Since emacs 24, emacs include theme system.
-;; (load-theme 'tango t)
 ;; (if (>= emacs-major-version 24)
-;;     (load-theme 'wombat t)
+;;     (load-theme 'monokai t)
 ;;   (load-file "~/.emacs.d/spring-theme.el"))
 (load-file "~/.emacs.d/spring-theme.el")
 
