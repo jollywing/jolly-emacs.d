@@ -32,7 +32,7 @@
 (autoload 'web-mode "web-mode.el" "WEB DEV MODE." t)
 (add-to-list 'auto-mode-alist '("\\.php$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-(add-hook 'web-mode-hook 'zencoding-mode)
+;; (add-hook 'web-mode-hook 'zencoding-mode)
 ;; (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.tpl$" . web-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))

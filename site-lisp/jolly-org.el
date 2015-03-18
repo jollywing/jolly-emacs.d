@@ -1,5 +1,8 @@
 (require 'org)
 
+;; open link with xdg-open
+(setq browse-url-browser-function 'browse-url-xdg-open)
+
 (setq org-log-done 'time)
 (setq org-agenda-files (list "~/blog/org/todo.org"
                              "~/blog/org/someday.org"))
