@@ -1,5 +1,7 @@
 (require 'org)
 
+(setq org-descriptive-links nil)
+
 ;; open link with xdg-open
 (setq browse-url-browser-function 'browse-url-xdg-open)
 
