@@ -40,5 +40,7 @@
 ;; (setq auto-mode-alist (cons '("\\.scp" . screenwriter-mode)
 ;; 			    auto-mode-alist))
 
+;; enable 'ps-ccrpt' if it is installed.
+(require 'ps-ccrypt "ps-ccrypt" t)
 
 (provide 'jolly-doc)

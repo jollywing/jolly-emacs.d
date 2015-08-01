@@ -30,9 +30,9 @@
     (setq default-frame-alist
           (append
            '((font . "consolas-18")
-             (background-color . "#99bb99")
+             (background-color . "#ccc")
              (foreground-color . "black")
-             (cursor-color . "dark red")
+             (cursor-color . "dark green")
              )
            default-frame-alist))
 
@@ -44,18 +44,33 @@
     ;; (set-face-foreground 'web-mode-html-attr-name-face "darkgreen")
 
     ;; set Chinese font
-    (set-fontset-font "fontset-default" 'unicode
-                      '("microsoft yahei" . "unicode-bmp"))
     ;; (set-fontset-font "fontset-default" 'unicode
-    ;;                   '("lihei pro" . "unicode-bmp"))
+    ;;                   '("microsoft yahei" . "unicode-bmp"))
+    (set-fontset-font "fontset-default" 'unicode
+                      '("simsun" . "unicode-bmp"))
     ))
 
+(defun set-theme-light ()
+  "set light background theme"
+  (interactive)
+  (set-background-color "#99bb99")
+  (set-foreground-color "black")
+  (set-cursor-color "navy")
+  )
+
+(defun set-theme-dark ()
+  "set dark background theme"
+  (interactive)
+  (set-background-color "#222")
+  (set-foreground-color "#ccc")
+  (set-cursor-color "orchid")
+  )
 
 ;; Since emacs 24, emacs include theme system.
 ;; (if (>= emacs-major-version 24)
 ;;     (load-theme 'monokai t)
 ;;   (load-file "~/.emacs.d/spring-theme.el"))
-(load-file "~/.emacs.d/spring-theme.el")
+;; (load-file "~/.emacs.d/spring-theme.el")
 
 ;; no cursor blink
 (blink-cursor-mode -1)
