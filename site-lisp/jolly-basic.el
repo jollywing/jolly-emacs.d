@@ -213,5 +213,12 @@
 (server-force-delete)
 (server-start)
 
+;; If you closed the scratch buffer,
+;; you can get another scratch buffer by execute this function
+(defun create-scratch-buffer nil
+  "create a scratch buffer"
+  (interactive)
+  (switch-to-buffer (get-buffer-create "*scratch*"))
+  (lisp-interaction-mode))
 
 (provide 'jolly-basic)

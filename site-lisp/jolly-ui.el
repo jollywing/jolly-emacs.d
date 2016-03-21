@@ -30,9 +30,9 @@
     (setq default-frame-alist
           (append
            '((font . "consolas-18")
-             (background-color . "#ccc")
-             (foreground-color . "black")
-             (cursor-color . "dark green")
+             (background-color . "#222")
+             (foreground-color . "#ccc")
+             (cursor-color . "orchid")
              )
            default-frame-alist))
 
@@ -47,7 +47,7 @@
     ;; (set-fontset-font "fontset-default" 'unicode
     ;;                   '("microsoft yahei" . "unicode-bmp"))
     (set-fontset-font "fontset-default" 'unicode
-                      '("simsun" . "unicode-bmp"))
+                      '("simhei" . "unicode-bmp"))
     ))
 
 (defun set-theme-light ()

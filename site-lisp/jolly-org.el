@@ -6,8 +6,7 @@
 (setq browse-url-browser-function 'browse-url-xdg-open)
 
 (setq org-log-done 'time)
-(setq org-agenda-files (list "~/blog/org/todo.org"
-                             "~/blog/org/someday.org"))
+(setq org-agenda-files (list "~/nutcloud/org/2015.org"))
 
 ;; highlight code when edit org document
 (setq org-src-fontify-natively t)
@@ -48,4 +47,10 @@
 
 (add-hook 'org-mode-hook 'imenu-add-menubar-index)
 (add-hook 'org-mode-hook (lambda ()(setq truncate-lines nil)))
+
+;; mobile org
+
+(setq org-directory "~/nutcloud/org")
+(setq org-mobile-directory "https://dav.jianguoyun.com/dav/nut")
+
 (provide 'jolly-org)
