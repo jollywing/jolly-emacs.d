@@ -49,7 +49,9 @@
    [default default default italic underline success warning error])
  '(custom-safe-themes
    (quote
-    ("bce1c321471d37b875f99c83cb7b451fd8386001259e1c0909d6e078ea60f00b" default))))
+    ("97a2b10275e3e5c67f46ddaac0ec7969aeb35068c03ec4157cf4887c401e74b1" "b8c5adfc0230bd8e8d73450c2cd4044ad7ba1d24458e37b6dec65607fc392980" "1de06eb8a32632d627616cce8f4b8aa851ee3f707f10f661e4854cb2be407a26" "759fd5856e85b6dca95615ffc0e214036d738639246a11dc224b7084d2a98117" "9e6ac467fa1e5eb09e2ac477f61c56b2e172815b4a6a43cf48def62f9d3e5bf9" "4e262566c3d57706c70e403d440146a5440de056dfaeb3062f004da1711d83fc" "e9c601d5ad29081e2e317cc1da13f0a399a9baadac21c8b6579cb16a9c08f929" default)))
+ '(menu-bar-mode nil)
+ '(safe-local-variable-values (quote ((encoding . utf-8)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

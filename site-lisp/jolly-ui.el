@@ -18,23 +18,23 @@
 (if (equal window-system nil)
     ()
   (progn
-    ;; (setq default-frame-alist
-    ;;       (append
-    ;;        '((font . "consolas-14")
-    ;;          (background-color . "gray20")
-    ;;          (foreground-color . "LightGoldenrod")
-    ;;          (cursor-color . "WhiteSmoke"))
-    ;;        default-frame-alist))
-
-    ;; (set-face-attribute 'default nil :height 180)
     (setq default-frame-alist
           (append
-           '((font . "consolas-18")
-             (background-color . "#222")
-             (foreground-color . "#ccc")
-             (cursor-color . "orchid")
-             )
+           '((font . "WenQuanYi Zen Hei Mono-12")
+             (background-color . "gray20")
+             (foreground-color . "LightGoldenrod")
+             (cursor-color . "WhiteSmoke"))
            default-frame-alist))
+
+    ;; (set-face-attribute 'default nil :height 180)
+    ;; (setq default-frame-alist
+    ;;       (append
+    ;;        '((font . "consolas-18")
+    ;;          (background-color . "#222")
+    ;;          (foreground-color . "#ccc")
+    ;;          (cursor-color . "orchid")
+    ;;          )
+    ;;        default-frame-alist))
 
     (set-face-attribute 'mode-line nil
                         :foreground "WhiteSmoke" :background "DarkGoldenrod"
@@ -46,8 +46,8 @@
     ;; set Chinese font
     ;; (set-fontset-font "fontset-default" 'unicode
     ;;                   '("microsoft yahei" . "unicode-bmp"))
-    (set-fontset-font "fontset-default" 'unicode
-                      '("simhei" . "unicode-bmp"))
+    ;; (set-fontset-font "fontset-default" 'unicode
+    ;;                   '("simhei" . "unicode-bmp"))
     ))
 
 (defun set-theme-light ()
