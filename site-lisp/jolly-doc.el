@@ -17,7 +17,7 @@
 ;;   "Major mode for editing Markdown files" t)
 ;; (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-;; (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-hook 'markdown-mode-hook 'imenu-add-menubar-index)
 
 ;; open MSword document in emacs
@@ -42,5 +42,15 @@
 
 ;; enable 'ps-ccrpt' if it is installed.
 (require 'ps-ccrypt "ps-ccrypt" t)
+
+;; insert markdown diary template
+;; (defvar DIARY-MARKDOWN-TPL "## ##\n\n- 晨：\n- 上午：\n- 中午：\n- 下午：\n- 晚：\n- 合计：\n\n")
+(defun insert-diary-markdown-tpl ()
+  "Insert a diary entry into my markdown diary."
+  (interactive)
+  (insert "## ")
+  (insert (format-time-string "%Y-%m-%d %a"))
+  (insert " ##\n\n- 晨：\n- 上午：\n- 中午：\n- 下午：\n- 晚：\n- 合计：\n"))
+(global-set-key (kbd "C-c i") 'insert-diary-markdown-tpl)
 
 (provide 'jolly-doc)

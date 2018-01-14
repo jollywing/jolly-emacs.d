@@ -20,7 +20,7 @@
   (progn
     (setq default-frame-alist
           (append
-           '((font . "WenQuanYi Zen Hei Mono-12")
+           '((font . "xos4 Terminus-14")
              (background-color . "gray20")
              (foreground-color . "LightGoldenrod")
              (cursor-color . "WhiteSmoke"))
@@ -44,8 +44,8 @@
     ;; (set-face-foreground 'web-mode-html-attr-name-face "darkgreen")
 
     ;; set Chinese font
-    ;; (set-fontset-font "fontset-default" 'unicode
-    ;;                   '("microsoft yahei" . "unicode-bmp"))
+    (set-fontset-font "fontset-default" 'unicode
+                      '("WenQuanYi Zen Hei" . "unicode-bmp"))
     ;; (set-fontset-font "fontset-default" 'unicode
     ;;                   '("simhei" . "unicode-bmp"))
     ))
