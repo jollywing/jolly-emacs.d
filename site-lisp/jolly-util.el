@@ -31,33 +31,33 @@ the current time will be inserted in the format of HH:MM."
   (message "arg = %d" arg)
   )
 
-(defun delete-blank-lines-region (beg end) 
-  "Execute `delete-blank-lines' in region." 
-  (interactive "*r") 
-  (save-excursion 
-    (goto-char beg) 
-    (let ((blank-line "^\\s-*$") 
-          (nonblank-line "^.*\\S-.*$") 
-          blank-beg blank-end) 
-      (while (and (< (point) end) (setq blank-beg (search-forward-regexp blank-line end t))) 
-        (save-excursion 
-          (setq blank-end (search-forward-regexp nonblank-line end t))) 
-        (if blank-end 
-            (setq end (- end (- blank-end blank-beg))) 
-          (setq end 0)) 
-        (previous-line) 
-        (delete-blank-lines))))) 
+(defun delete-blank-lines-region (beg end)
+  "Execute `delete-blank-lines' in region."
+  (interactive "*r")
+  (save-excursion
+    (goto-char beg)
+    (let ((blank-line "^\\s-*$")
+          (nonblank-line "^.*\\S-.*$")
+          blank-beg blank-end)
+      (while (and (< (point) end) (setq blank-beg (search-forward-regexp blank-line end t)))
+        (save-excursion
+          (setq blank-end (search-forward-regexp nonblank-line end t)))
+        (if blank-end
+            (setq end (- end (- blank-end blank-beg)))
+          (setq end 0))
+        (previous-line)
+        (delete-blank-lines)))))
 
-(defun smart-delete-blank-lines (&optional no-region) 
-  "Smart `delete-blank-lines'. 
+(defun smart-delete-blank-lines (&optional no-region)
+  "Smart `delete-blank-lines'.
 
-If NO-REGION is non-nil, always execute `delete-blank-lines', 
-otherwise, if `mark-active', execute `delete-blank-lines-region', 
-and execute `delete-blank-lines' if there no mark." 
-  (interactive "P") 
-  (if (or no-region (not mark-active)) 
-      (delete-blank-lines) 
-    (call-interactively 'delete-blank-lines-region))) 
+If NO-REGION is non-nil, always execute `delete-blank-lines',
+otherwise, if `mark-active', execute `delete-blank-lines-region',
+and execute `delete-blank-lines' if there no mark."
+  (interactive "P")
+  (if (or no-region (not mark-active))
+      (delete-blank-lines)
+    (call-interactively 'delete-blank-lines-region)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -88,5 +88,25 @@ can not handle string contains \\n, \), \;"
     )
   )
 
+;; xserver shortcuts, 2018-02-14 Wed
+(defun change-x-backlight (&optional arg)
+  "Change x backlight in Emacs,
+this need xbacklight program installed"
+  (interactive "p")
+  (if (= arg 1)
+      (call-process "xbacklight" nil nil nil "+" "5")
+    (call-process "xbacklight" nil nil nil "-" "5"))
+  )
+(global-set-key (kbd "C-c C-x +") 'change-x-backlight)
+
+(defun change-x-volume (&optional arg)
+  "Change sound volume in Emacs,
+this need amixer program installed"
+  (interactive "p")
+  (if (= arg 1)
+      (call-process "amixer" nil nil nil "set" "Master" "5%+")
+    (call-process "amixer" nil nil nil "set" "Master" "5%-")
+    ))
+(global-set-key (kbd "C-c C-x ]") 'change-x-volume)
 
 (provide 'jolly-util)

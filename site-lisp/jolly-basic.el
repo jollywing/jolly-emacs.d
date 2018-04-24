@@ -188,11 +188,21 @@
 ;; add at the front of list, don't conncect to remote hosts
 (add-to-list 'recentf-keep 'file-remote-p)
 
+(defun get-scratch-buffer (&optional arg)
+  "switch to scratch buffer in current window or other window,
+if arg is not nil, switch to scratch buffer in otehr window."
+  (interactive "p")
+  (if (= arg 4)
+      (switch-to-buffer-other-window "*scratch*")
+    (switch-to-buffer "*scratch*"))
+  )
+
 (global-set-key [(f2)] 'kill-this-buffer)
 (global-set-key [(f5)] 'shell)
 (global-set-key [(f6)] 'recentf-open-files)
 (global-set-key [(f7)] 'shell-command)
-(global-set-key [(f8)] 'other-window)
+(global-set-key [(f8)] 'get-scratch-buffer)
+(global-set-key [(f12)] 'other-window)
 
 ;; (defun switch-to-scratch () (interactive) (switch-to-buffer "*scratch*"))
 ;; (global-set-key [(f11)] 'switch-to-scratch)
@@ -207,6 +217,9 @@
 ;; Note that this is done by default in XEmacs
 (global-set-key [(meta left)] 'backward-sexp)
 (global-set-key [(meta right)] 'forward-sexp)
+
+;; rebind C-x C-b keychord from list-buffers to buffer-menu
+(global-set-key "\C-x\C-b" 'buffer-menu)
 
 ;; show picture in emacs
 (auto-image-file-mode)

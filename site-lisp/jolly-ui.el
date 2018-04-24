@@ -18,23 +18,28 @@
 (if (equal window-system nil)
     ()
   (progn
+    ;; (setq default-frame-alist
+    ;;       (append
+    ;;        '((font . "xos4 Terminus-14")
+             ;; (background-color . "gray20")
+             ;; (foreground-color . "LightGoldenrod")
+             ;; (cursor-color . "WhiteSmoke"))
+           ;;   (background-color . "#cceecc")
+           ;;   (foreground-color . "#001111")
+           ;;   (cursor-color . "#99cc99"))
+           ;; default-frame-alist))
+
+    ;; (set-face-attribute 'default nil :height 180)
     (setq default-frame-alist
           (append
            '((font . "xos4 Terminus-14")
-             (background-color . "gray20")
-             (foreground-color . "LightGoldenrod")
-             (cursor-color . "WhiteSmoke"))
+             ;; (background-color . "#222")
+             ;; (foreground-color . "#ccc")
+             (background-color . "#204030")
+             (foreground-color . "#e0c0a0")
+             (cursor-color . "orchid")
+             )
            default-frame-alist))
-
-    ;; (set-face-attribute 'default nil :height 180)
-    ;; (setq default-frame-alist
-    ;;       (append
-    ;;        '((font . "consolas-18")
-    ;;          (background-color . "#222")
-    ;;          (foreground-color . "#ccc")
-    ;;          (cursor-color . "orchid")
-    ;;          )
-    ;;        default-frame-alist))
 
     (set-face-attribute 'mode-line nil
                         :foreground "WhiteSmoke" :background "DarkGoldenrod"

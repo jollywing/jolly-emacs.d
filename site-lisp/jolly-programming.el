@@ -79,13 +79,13 @@
 ;;-------------------------Auto Complete--------------------
 ;; package-install auto-complete
 ;; If auto-complete-config not found, require return nil
-(if (require 'auto-complete-config "auto-complete-config" t)
-    (progn
-      (message "jolly said: auto complete loaded.")
-      (ac-config-default)
-      (setq ac-delay 0.5)
-      )
-  (message "jolly said: auto complete plugin not found."))
+;; (if (require 'auto-complete-config "auto-complete-config" t)
+;;     (progn
+;;       (message "jolly said: auto complete loaded.")
+;;       (ac-config-default)
+;;       (setq ac-delay 0.5)
+;;       )
+;;   (message "jolly said: auto complete plugin not found."))
 
 ;; (when (load "auto-complete" t)
 ;;   (progn
@@ -97,6 +97,20 @@
 ;;-------------------------Company--------------------
 ;; package-install company
 ;; (add-hook 'after-init-hook 'global-company-mode)
+(if (require 'company "company" t)
+    (progn
+      (message "jolly said: company-mode loaded.")
+      (setq company-backends '(company-bbdb
+                               company-nxml
+                               company-css
+                               company-capf
+                               company-elisp
+                               company-files
+                               (company-dabbrev-code company-keywords)
+                               company-dabbrev))
+      (add-hook 'python-mode-hook 'company-mode)
+      )
+  (message "jolly said: company plugin not found."))
 
 
 ;;-------------------------scheme--------------------

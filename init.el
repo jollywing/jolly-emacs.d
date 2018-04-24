@@ -56,9 +56,11 @@
    [default default default italic underline success warning error])
  '(custom-safe-themes
    (quote
-    ("97a2b10275e3e5c67f46ddaac0ec7969aeb35068c03ec4157cf4887c401e74b1" "b8c5adfc0230bd8e8d73450c2cd4044ad7ba1d24458e37b6dec65607fc392980" "1de06eb8a32632d627616cce8f4b8aa851ee3f707f10f661e4854cb2be407a26" "759fd5856e85b6dca95615ffc0e214036d738639246a11dc224b7084d2a98117" "9e6ac467fa1e5eb09e2ac477f61c56b2e172815b4a6a43cf48def62f9d3e5bf9" "4e262566c3d57706c70e403d440146a5440de056dfaeb3062f004da1711d83fc" "e9c601d5ad29081e2e317cc1da13f0a399a9baadac21c8b6579cb16a9c08f929" default)))
+    ("759fd5856e85b6dca95615ffc0e214036d738639246a11dc224b7084d2a98117" "1ba61848d0d8c78e037867c26f118875705c20f5ad64949a8cee8c8059e5c50f" "a1e99cb36d6235abbe426a0a96fc26c006306f6b9d2a64c2435363350a987b4c" "9e6ac467fa1e5eb09e2ac477f61c56b2e172815b4a6a43cf48def62f9d3e5bf9" "e9c601d5ad29081e2e317cc1da13f0a399a9baadac21c8b6579cb16a9c08f929" default)))
  '(menu-bar-mode nil)
- '(package-selected-packages (quote (groovy-mode gradle-mode web-mode markdown-mode)))
+ '(package-selected-packages
+   (quote
+    (ensime scala-mode buffer-move graphviz-dot-mode groovy-mode gradle-mode web-mode markdown-mode)))
  '(safe-local-variable-values (quote ((encoding . utf-8)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

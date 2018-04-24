@@ -48,9 +48,25 @@
 (defun insert-diary-markdown-tpl ()
   "Insert a diary entry into my markdown diary."
   (interactive)
-  (insert "## ")
-  (insert (format-time-string "%Y-%m-%d %a"))
-  (insert " ##\n\n- 晨：\n- 上午：\n- 中午：\n- 下午：\n- 晚：\n- 合计：\n"))
-(global-set-key (kbd "C-c i") 'insert-diary-markdown-tpl)
+  (save-excursion
+    (insert "## ")
+    (insert (format-time-string "%Y-%m-%d %a"))
+    (insert " ##\n\n- 晨：\n- 上午：\n- 中午：\n- 下午：\n- 晚：\n- 合计：\n"))
+  )
+(global-set-key (kbd "C-c i d") 'insert-diary-markdown-tpl)
+;;(define-key markdown-mode-map "\C-ci" 'insert-diary-markdown-tpl)
+
+(defun insert-write-line-num (&optional arg)
+  "Insert write line nums for my own writing."
+  (interactive "p")
+  (if (= arg 1)
+      (setq arg 10))
+  (setq tmp-v 1)
+  (save-excursion
+    (while (<= tmp-v arg)
+      (insert (format "%d\n" tmp-v))
+      (setq tmp-v (+ tmp-v 1)))
+    ))
+(global-set-key (kbd "C-c i w") 'insert-write-line-num)
 
 (provide 'jolly-doc)

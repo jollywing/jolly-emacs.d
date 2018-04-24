@@ -1,20 +1,28 @@
 (require 'org)
 
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+
 (setq org-descriptive-links nil)
+(setq org-directory "/mnt/share/jollywing/gtd")
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(setq org-agenda-files (list "/mnt/share/jollywing/gtd/gtd.org"))
 
 ;; open link with xdg-open
 (setq browse-url-browser-function 'browse-url-xdg-open)
 
 (setq org-log-done 'time)
-(setq org-agenda-files (list "~/nutcloud/org/2015.org"))
 
 ;; highlight code when edit org document
 (setq org-src-fontify-natively t)
 
 ;; customize title size
-(set-face-attribute 'org-level-1 nil :height 1.3 :bold t)
-(set-face-attribute 'org-level-2 nil :height 1.2 :bold t)
-(set-face-attribute 'org-level-3 nil :height 1.1 :bold t)
+(set-face-attribute 'org-level-1 nil :height 1.1 :bold t)
+;; (set-face-attribute 'org-level-1 nil :height 1.3 :bold t)
+;; (set-face-attribute 'org-level-2 nil :height 1.2 :bold t)
+;; (set-face-attribute 'org-level-3 nil :height 1.1 :bold t)
 
 ;; M-x org-publish
 (setq org-publish-project-alist
@@ -50,7 +58,6 @@
 
 ;; mobile org
 
-(setq org-directory "~/nutcloud/org")
 (setq org-mobile-directory "https://dav.jianguoyun.com/dav/nut")
 
 (provide 'jolly-org)
